@@ -17,3 +17,6 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 gem 'bourbon'
 gem 'neat'
 gem 'bitters'
+
+# Slim template
+gem 'slim'
