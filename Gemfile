@@ -2,6 +2,8 @@
 # the following line to use "http://" instead
 source 'https://rubygems.org'
 
+ruby '2.1.2'
+
 gem "middleman", "~>3.3.7"
 
 # Live-reloading plugin
@@ -20,3 +22,9 @@ gem 'bitters'
 
 # Slim template
 gem 'slim'
+
+# Web server
+gem 'puma'
+
+# to serve static files
+gem 'rack-contrib'
