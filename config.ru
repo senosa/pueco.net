@@ -2,7 +2,7 @@ require 'rack'
 require 'rack/contrib/try_static'
 
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
-  [username, password] == ['username', 'password']
+  [username, password] == [ENV['BASIC_AUTH_USERNAME'], ENV['BASIC_AUTH_PASSWORD']]
 end
 
 # Serve files from the build directory
