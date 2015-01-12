@@ -29,3 +29,31 @@ $visual-grid-opacity: 0.15;
     }
   }
 }
+
+table {
+  font-size: $base-font-size * 0.75;
+}
+
+#staff-list {
+  li {
+    @include row;
+    margin-bottom: $base-spacing / 2;
+    img {
+      @include span-columns(4);
+    }
+    ul {
+      @include span-columns(8);
+      li {
+        font-size: $base-font-size * 0.75;
+        margin: 0;
+      }
+    }
+  }
+  // li {
+  //   @include span-columns(6);
+  //   @include omega(2n);
+  //   li {
+  //     @include fill-parent;
+  //   }
+  // }
+}
