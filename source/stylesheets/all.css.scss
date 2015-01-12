@@ -2,6 +2,10 @@
 
 @import "bourbon";
 @import "base/base";   /* Bitters needs to be imported before Neat */
+// $visual-grid: true;
+$visual-grid-color: yellow;
+$visual-grid-index: 0;
+$visual-grid-opacity: 0.15;
 @import "neat";
 
 @import "partials/header";
