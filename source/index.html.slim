@@ -12,16 +12,23 @@ title: ペットシッターぷうこ
 
 .container
   h2 Contents
-  ul
-    li
-      a[href="/flow/" class="hero-logo"]
-        img src=(lorem.image '96x96', :text => '96x96 flow') alt='ご利用の流れ'
-    li
-      a[href="/care/" class="hero-logo"]
-        img src=(lorem.image '96x96', :text => '96x96 care') alt='サービス内容'
-    li
-      a[href="/price/" class="hero-logo"]
-        img src=(lorem.image '96x96', :text => '96x96 price') alt='ご利用料金'
+  #contents-links
+    ul
+      li
+        a[href="/flow/"]
+          .contents-links--img
+            img src=(lorem.image '192x192', :text => '192x192 flow') alt='ご利用の流れ'
+          h3 ご利用の流れ
+      li
+        a[href="/care/"]
+          .contents-links--img
+            img src=(lorem.image '192x192', :text => '192x192 care') alt='サービス内容'
+          h3 サービス内容
+      li
+        a[href="/price/"]
+          .contents-links--img
+            img src=(lorem.image '192x192', :text => '192x192 price') alt='ご利用料金'
+          h3 ご利用料金
 
 .container
   h1 ペットシッターとは？
