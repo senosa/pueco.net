@@ -4,4 +4,14 @@
 @import "base/base";   /* Bitters needs to be imported before Neat */
 @import "neat";
 
+@import "partials/header";
 @import "partials/hero";
+@import "partials/footer";
+
+.container {
+  @include outer-container;
+  padding: 0 $base-spacing / 2;
+  @include media($max-screen) {
+    padding: 0;
+  }
+}

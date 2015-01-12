@@ -1,0 +1,16 @@
+header {
+  ul#alpha,
+  ul#beta {
+    @include span-columns(3);
+    li {
+      @include span-columns(1 of 3);
+      background-color: #ccf;
+    }
+  }
+
+  p#charlie,
+  p#dodo {
+    @include span-columns(3);
+    background-color: #cfc;
+  }
+}
