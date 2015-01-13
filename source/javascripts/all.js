@@ -1,2 +1,1 @@
-//= require jquery
-//= require _navigation.js
+//= require_tree .
