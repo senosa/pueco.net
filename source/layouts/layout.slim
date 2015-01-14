@@ -9,6 +9,6 @@ html
     = stylesheet_link_tag "normalize", "all"
     = javascript_include_tag  "all"
   body class=(page_classes)
-    = partial 'partials/header' unless current_path == 'index.html'
+    = partial 'partials/header'
     = yield
     = partial 'partials/footer'
