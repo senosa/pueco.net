@@ -8,9 +8,9 @@ $visual-grid-index: 0;
 $visual-grid-opacity: 0.15;
 @import "neat";
 
-@import "partials/header";
-@import "partials/hero";
-@import "partials/footer";
+@import "module/header";
+@import "module/hero";
+@import "module/footer";
 
 .container {
   @include outer-container;
