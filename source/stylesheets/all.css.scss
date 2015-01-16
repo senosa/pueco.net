@@ -8,9 +8,11 @@ $visual-grid-index: 0;
 $visual-grid-opacity: 0.15;
 @import "neat";
 
-@import "partials/header";
-@import "partials/hero";
-@import "partials/footer";
+@import "module/header";
+@import "module/hero";
+@import "module/footer";
+
+$small-font-size: em(14);
 
 .container {
   @include outer-container;
@@ -20,18 +22,34 @@ $visual-grid-opacity: 0.15;
   }
 }
 
+h1,
+h2,
+h3 {
+  margin-bottom: $base-spacing;
+}
+h2 {
+  border-bottom: 4px solid $base-accent-color;
+}
+h3 {
+  border-left: 4px solid $base-accent-color;
+}
+footer h3 {
+  border: none;
+}
+
 #contents-links {
+  h3 { border: none; }
   li {
     @include span-columns(4);
     text-align: center;
     h3 {
-      font-size: em(13);
+      font-size: $small-font-size;
     }
   }
 }
 
 table {
-  font-size: $base-font-size * 0.75;
+  font-size: $small-font-size;
 }
 
 #staff-list {
@@ -44,7 +62,7 @@ table {
     ul {
       @include span-columns(8);
       li {
-        font-size: $base-font-size * 0.75;
+        font-size: $small-font-size;
         margin: 0;
       }
     }

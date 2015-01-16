@@ -23,6 +23,10 @@ gem 'bitters'
 # Slim template
 gem 'slim'
 
+# jQuery
+# gem 'jquery-middleman' # jQuery v1.10.2
+gem 'middleman-jquery' # jQuery v2.1.1
+
 # Web server
 gem 'puma'
 

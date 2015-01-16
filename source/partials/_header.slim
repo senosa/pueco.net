@@ -1,9 +1,19 @@
+
 header
   .container
-    ul
-      li
-        a[href="/flow/"] ご利用の流れ
-      li
-        a[href="/care/"] サービス内容
-      li
-        a[href="/price/"] ご利用料金表
+    button.js-menu-trigger.sliding-menu-button[type="button"]
+      img[src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon"]
+    nav.js-menu.sliding-menu-content
+      ul
+        li
+          = link_to 'ホーム', '/'
+        li
+          = link_to 'ご利用の流れ', '/flow/'
+        li
+          = link_to 'サービス内容', '/care/'
+        li
+          = link_to 'ご利用料金表', '/price/'
+        li
+          = link_to '利用規約', '/legal/'
+
+.js-menu-screen.sliding-menu-fade-screen
