@@ -89,6 +89,9 @@ table {
 }
 
 #staff-list {
+  h3 {
+    margin: 0;
+  }
   li {
     @include row;
     margin-bottom: $base-spacing / 2;
