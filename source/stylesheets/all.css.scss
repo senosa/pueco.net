@@ -16,6 +16,10 @@ $visual-grid-opacity: 0.15;
 
 $small-font-size: em(14);
 
+section {
+  margin-bottom: $base-spacing;
+}
+
 .container {
   @include outer-container;
   padding: 0 $base-spacing / 2;
