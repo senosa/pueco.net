@@ -6,14 +6,24 @@ header
     nav.js-menu.sliding-menu-content
       ul
         li
-          = link_to 'ホーム', '/'
+          a[href='/']
+            i.fa.fa-fw.fa-home
+            | ホーム
         li
-          = link_to 'ご利用の流れ', '/flow/'
+          a[href='/flow/']
+            i.fa.fa-fw.fa-paw
+            | ご利用の流れ
         li
-          = link_to 'サービス内容', '/care/'
+          a[href='/care/']
+            i.fa.fa-fw.fa-smile-o
+            | サービス内容
         li
-          = link_to 'ご利用料金表', '/price/'
+          a[href='/price/']
+            i.fa.fa-fw.fa-jpy
+            | ご利用料金表
         li
-          = link_to '利用規約', '/legal/'
+          a[href='/legal/']
+            i.fa.fa-fw.fa-gavel
+            | 利用規約
 
 .js-menu-screen.sliding-menu-fade-screen
