@@ -1,6 +1,7 @@
 # If you do not have OpenSSL installed, update
 # the following line to use "http://" instead
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 ruby '2.1.2'
 
@@ -22,6 +23,13 @@ gem 'bitters'
 
 # Slim template
 gem 'slim'
+
+# Rails Assets
+gem 'rails-assets-font-awesome', '~> 4.2.0', :require => false
+
+# jQuery
+# gem 'jquery-middleman' # jQuery v1.10.2
+gem 'middleman-jquery' # jQuery v2.1.1
 
 # Web server
 gem 'puma'
