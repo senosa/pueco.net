@@ -54,7 +54,7 @@ section
       h3 ご利用可能な地域
       p 木更津市に拠点をおき、木更津市全域にて活動中。
       p 近隣の市（君津市・袖ケ浦市・富津市）も可能な限りご相談に応じておりますので 、まずはお気軽にお問い合せ下さい。
-      img src=(lorem.image '640x480', text: '640x480 Map')
+      #map_canvas
     section
       h3 動物取扱者標識
       table
@@ -133,3 +133,58 @@ section
             li 血統書付き柴犬
             li 赤
             li ガラスに鼻先を押し付けるのが好き
+
+javascript:
+  var bittersMap = (function () {
+    var myLatlng = new google.maps.LatLng(35.343486, 139.927381),
+        mapCenter = new google.maps.LatLng(35.343486, 139.927381),
+        mapCanvas = document.getElementById('map_canvas'),
+        mapOptions = {
+          center: mapCenter,
+          zoom: 14,
+          scrollwheel: false,
+          draggable: true,
+          disableDefaultUI: true,
+          zoomControl: true,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        },
+        map = new google.maps.Map(mapCanvas, mapOptions),
+        contentString =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">ペットシッターぷうこ</h1>'+
+          '<div id="bodyContent"'+
+          '<p>〒292-0815 千葉県木更津市大久保3-3-11</p>'+
+          '<ul><li><i class="fa fa-fw fa-phone"></i>0438-36-1388</li><li><i class="fa fa-fw fa-envelope-o"></i>kwan-o@docomo.ne.jp</li></ul>'+
+          '<a href="https://www.google.co.jp/maps/place/%E3%80%92292-0815+%E5%8D%83%E8%91%89%E7%9C%8C%E6%9C%A8%E6%9B%B4%E6%B4%A5%E5%B8%82%E5%A4%A7%E4%B9%85%E4%BF%9D%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%93+%E3%83%9A%E3%83%83%E3%83%88%E3%82%B7%E3%83%83%E3%82%BF%E3%83%BC%E3%81%B7%E3%81%86%E3%81%93/@35.3435044,139.9273382,15z/data=!4m2!3m1!1s0x60180c7d3b48d3fb:0x1703c252edfa616d">Google マップで見る</a>'+
+          '</div>'+
+          '</div>',
+        infowindow = new google.maps.InfoWindow({
+          content: contentString,
+          maxWidth: 300
+        }),
+        marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: 'ペットシッターぷうこ'
+        });
+
+    return {
+      init: function () {
+        map.set('styles', [{
+          featureType: 'landscape',
+          // featureType: 'all',
+          elementType: 'geometry',
+          stylers: [
+          ]}
+        ]);
+
+        google.maps.event.addListener(marker, 'click', function () {
+          infowindow.open(map,marker);
+        });
+      }
+    };
+  }());
+
+  bittersMap.init();
