@@ -85,6 +85,9 @@ section h3:before {
     @include border-right-radius(50%);
     @include border-bottom-radius(50%);
     @include border-left-radius(50%);
+    @include media($medium-screen) {
+      max-width: 192px;
+    }
   }
 }
 
