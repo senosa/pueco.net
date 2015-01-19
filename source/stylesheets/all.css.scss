@@ -29,11 +29,8 @@ section {
   }
 }
 
-h1,
 h2 {
   margin-bottom: $base-spacing;
-}
-h2 {
   border-bottom: 2px solid $light-gray;
   // border-bottom: 2px solid lighten($base-accent-color, 20%);
   // border-bottom: 2px solid tint($base-accent-color, 20%);
@@ -83,6 +80,43 @@ section h3:before {
       content: "";
     }
   }
+}
+
+#page-title {
+  background-color: $base-accent-color;
+  color: white;
+  h1 {
+    line-height: 2.3;
+  }
+}
+
+#eyecatch {
+  margin-bottom: $base-spacing;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+  @include media($medium-screen) {
+    height: 200px;
+  }
+  @include media($large-screen) {
+    height: 300px;
+  }
+}
+.flow #eyecatch {
+  background-image: url(/images/eyecatch-flow.jpg);
+  background-position: 66% center;
+}
+.care #eyecatch {
+  background-image: url(/images/eyecatch-care.jpg);
+  background-position: 66% center;
+}
+.price #eyecatch {
+  background-image: url(/images/eyecatch-price.jpg);
+  background-position: 66% center;
+}
+.legal #eyecatch {
+  background-image: url(/images/eyecatch-legal.jpg);
+  background-position: 66% center;
 }
 
 table {
