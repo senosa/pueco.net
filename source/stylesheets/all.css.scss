@@ -162,6 +162,10 @@ table {
 .contact-links {
   li {
     margin-bottom: $base-spacing / 2;
+    @include media($medium-screen) {
+      @include span-columns(6);
+      margin-bottom: 0;
+    }
   }
   a {
     @extend %button;
