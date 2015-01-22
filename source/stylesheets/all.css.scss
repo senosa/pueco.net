@@ -161,7 +161,7 @@ table {
 
 .contact-links {
   li {
-    margin-bottom: $base-spacing;
+    margin-bottom: $base-spacing / 2;
   }
   a {
     @extend %button;
