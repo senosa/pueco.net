@@ -1,0 +1,19 @@
+#staff-list {
+  h3 {
+    margin: 0;
+  }
+  li {
+    @include row;
+    margin-bottom: $base-spacing / 2;
+    img {
+      @include span-columns(4);
+    }
+    ul {
+      @include span-columns(8);
+      li {
+        font-size: $small-font-size;
+        margin: 0;
+      }
+    }
+  }
+}

@@ -10,12 +10,17 @@ $visual-grid-opacity: 0.15;
 
 @import "font-awesome";
 
+$small-font-size: em(14);
+
+@import "module/contact-links";
+@import "module/contents-links";
+@import "module/eyecatch";
 @import "module/footer";
 @import "module/header";
 @import "module/hero";
 @import "module/map";
-
-$small-font-size: em(14);
+@import "module/page-title";
+@import "module/staff-list";
 
 section {
   margin-bottom: $base-spacing;
@@ -66,110 +71,6 @@ section h3:before {
   margin-right: 0.2em;
 }
 
-#contents-links {
-  li {
-    @include span-columns(4);
-    text-align: center;
-    h3 {
-      font-size: $small-font-size;
-    }
-    h3:before {
-      content: "";
-    }
-  }
-  img {
-    @include border-top-radius(50%);
-    @include border-right-radius(50%);
-    @include border-bottom-radius(50%);
-    @include border-left-radius(50%);
-    @include media($medium-screen) {
-      max-width: 192px;
-    }
-  }
-}
-
-#page-title {
-  background-color: $base-accent-color;
-  color: white;
-  h1 {
-    line-height: 2.3;
-  }
-}
-
-#eyecatch {
-  margin-bottom: $base-spacing;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 150px;
-  @include media($medium-screen) {
-    height: 200px;
-  }
-  @include media($large-screen) {
-    height: 300px;
-  }
-}
-.flow #eyecatch {
-  background-image: url(/images/eyecatch-flow.jpg);
-  background-position: 66% center;
-}
-.care #eyecatch {
-  background-image: url(/images/eyecatch-care.jpg);
-  background-position: 66% center;
-}
-.price #eyecatch {
-  background-image: url(/images/eyecatch-price.jpg);
-  background-position: 66% center;
-}
-.legal #eyecatch {
-  background-image: url(/images/eyecatch-legal.jpg);
-  background-position: 66% center;
-}
-
 table {
   font-size: $small-font-size;
-}
-
-#staff-list {
-  h3 {
-    margin: 0;
-  }
-  li {
-    @include row;
-    margin-bottom: $base-spacing / 2;
-    img {
-      @include span-columns(4);
-    }
-    ul {
-      @include span-columns(8);
-      li {
-        font-size: $small-font-size;
-        margin: 0;
-      }
-    }
-  }
-}
-
-.contact-links {
-  li {
-    margin-bottom: $base-spacing / 2;
-    @include media($medium-screen) {
-      @include span-columns(6);
-      margin-bottom: 0;
-    }
-  }
-  a {
-    @extend %button;
-    border: 1px solid rgba(0, 0, 0, .1);
-    font-size: $base-font-size * 1.2;
-    padding: 0;
-    line-height: 3;
-    width: 100%;
-    text-align: center;
-  }
-  i {
-    color: rgba(white, .7);
-    font-size: $base-font-size * 1.5;
-    position: relative;
-    top: 3px;
-  }
 }
