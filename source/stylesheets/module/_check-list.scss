@@ -1,0 +1,14 @@
+.check-list {
+  margin-left: $base-spacing / 2;
+  margin-bottom: $base-spacing / 2;
+  li {
+    line-height: 1.3;
+    margin-bottom: $base-spacing / 2;
+  }
+  li:before {
+    content: '\f05d';
+    font-family: FontAwesome;
+    color: #4DB264;
+    margin-right: 0.2em;
+  }
+}
