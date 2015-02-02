@@ -6,6 +6,10 @@
     @include row;
     margin-bottom: $base-spacing / 2;
     img {
+      @include border-top-radius(50%);
+      @include border-right-radius(50%);
+      @include border-bottom-radius(50%);
+      @include border-left-radius(50%);
       @include span-columns(4);
     }
     ul {
