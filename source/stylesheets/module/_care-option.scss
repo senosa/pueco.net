@@ -1,0 +1,8 @@
+.care-option {
+  img {
+    @include span-columns(4);
+    // margin: $base-spacing;
+    margin-right: $base-spacing;
+    margin-bottom: $base-spacing;
+  }
+}
